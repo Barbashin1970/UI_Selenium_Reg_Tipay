@@ -6,7 +6,6 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationTest {
-
     @Test
     public void checkCorrectData() {
         // создаём драйвер для браузера Chrome - по умолчанию
