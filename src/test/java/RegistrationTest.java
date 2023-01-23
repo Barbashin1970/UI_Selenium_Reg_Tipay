@@ -5,7 +5,8 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class SmokeTestRegistrationPage {
+public class RegistrationTest {
+
     @Test
     public void checkCorrectData() {
         // создаём драйвер для браузера Chrome - по умолчанию
@@ -14,7 +15,7 @@ public class SmokeTestRegistrationPage {
 
         // Вводим информацию о компании
         $(byName("company")).shouldBe(enabled);
-        $(byName("company")).setValue("ООО Новая компания");
+        $(byName("company")).setValue("ООО Еще одна компания");
         $(byName("ogrn")).shouldBe(enabled);
         $(byName("ogrn")).setValue("1234567890123");
         $(byName("inn")).shouldBe(enabled);
