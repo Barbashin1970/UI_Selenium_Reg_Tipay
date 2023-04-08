@@ -8,6 +8,9 @@ public class RegPage {
     private final WebDriver driver;
     // private static final By company = By.xpath(".//*[text()='company']");
     private static final By company = By.name("company");
+    private static final By ogrn = By.name("ogrn");
+    private static final By inn = By.name("inn");
+    private static final By address = By.name("address");
     public RegPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -24,12 +27,33 @@ public class RegPage {
     */
 
 
-    @Step("Вводим данные компании на странице Регистрация")
-
-    public void enterCompany(String name) {
+    @Step("Вводим юридическое наименование компании на странице Регистрация")
+    public RegPage enterCompany(String name) {
         driver.findElement(company).isEnabled();
         driver.findElement(company).click();
         driver.findElement(company).sendKeys(name);
+        return this;
+    }
+    @Step("Вводим ОГРН компании на странице Регистрация")
+    public RegPage enterOgrn(String ogrn_) {
+        driver.findElement(ogrn).isEnabled();
+        driver.findElement(ogrn).click();
+        driver.findElement(ogrn).sendKeys(ogrn_);
+        driver.findElement(ogrn).click();
+        return this;
+    }
+    @Step("Вводим ИНН компании на странице Регистрация")
+    public void enterInn(String inn_) {
+        driver.findElement(inn).isEnabled();
+        driver.findElement(inn).click();
+        driver.findElement(inn).sendKeys(inn_);
+        driver.findElement(inn).click();
+    }
+    @Step("Вводим адрес компании на странице Регистрация")
+    public void enterAddress(String address_) {
+        driver.findElement(address).isEnabled();
+        driver.findElement(address).click();
+        driver.findElement(address).sendKeys(address_);
     }
 /*
     @Step("Вводим e-mail на странице - Регистрация")
