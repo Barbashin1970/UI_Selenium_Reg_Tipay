@@ -12,7 +12,7 @@ import static data.UniformResourceLocator.*;
 
 public class SeleniumRegFormTest {
     @Test
-    public void registerDataTest() {
+    public void registerDataTest() throws InterruptedException {
         //WebDriver driver = ChangeBrowser.getBrowser(CHROME_WDM); // chrome с зависимостью WebDriverManager
         WebDriver driver = ChangeBrowser.getBrowser(CHROME);
         driver.manage().window().maximize();
@@ -36,6 +36,7 @@ public class SeleniumRegFormTest {
         regPage.enterPhone(PHONE);
 
         regPage.clickRegButton();
+        Thread.sleep(10000);
         driver.quit();
     }
 }
