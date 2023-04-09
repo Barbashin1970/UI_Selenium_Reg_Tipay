@@ -23,7 +23,6 @@ public class MainPage {
         return this;
     }
     @Step("Нажимаем кнопку Регистрация на главной странице")
-
     public void clickRegister() {
         driver.findElement(registerButtonMain).click();
     }

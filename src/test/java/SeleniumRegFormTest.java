@@ -17,16 +17,25 @@ public class SeleniumRegFormTest {
         WebDriver driver = ChangeBrowser.getBrowser(CHROME);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
         MainPage mainPage = new MainPage(driver);
         mainPage.openMainPage()
                 .clickRegister();
 
         RegPage regPage = new RegPage(driver);
         regPage.enterCompany(COMPANY);
-        regPage.enterOgrn("1234567890123");
-        regPage.enterInn("1234567890");
+        regPage.enterOgrn(OGRN);
+        regPage.enterInn(INN);
         regPage.enterAddress(ADDRESS);
+        regPage.enterBik(BIK);
+        regPage.enterBank(BANK);
+        regPage.enterCorr(CORR);
+        regPage.enterAccount(ACCOUNT);
+        regPage.enterName(NAME);
+        regPage.enterEmail(EMAIL);
+        regPage.enterPhone(PHONE);
 
-        // driver.quit();
+        regPage.clickRegButton();
+        driver.quit();
     }
 }
