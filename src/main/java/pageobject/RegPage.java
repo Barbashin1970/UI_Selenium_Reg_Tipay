@@ -10,14 +10,11 @@ import java.time.Duration;
 
 public class RegPage {
     private final WebDriver driver;
-
     private static final By regOk = By.xpath(".//*[text()='Ваша заявка на регистрацию принята. Менеджер свяжется с Вами в ближайшее время.']");
-
     private static final By company = By.name("company");
     private static final By ogrn = By.name("ogrn");
     private static final By inn = By.name("inn");
     private static final By address = By.name("address");
-
     private static final By bik= By.name("bik");
     private static final By bank = By.name("bank");
     private static final By corr_account = By.name("corr_account");
@@ -25,7 +22,6 @@ public class RegPage {
     private static final By name = By.name("name");
     private static final By email = By.name("email");
     private static final By phone = By.name("tildaspec-phone-part[]");
-
     private static final By registerButton = By.xpath(".//*[text()='Регистрация']");
 
     public RegPage(WebDriver driver) {
