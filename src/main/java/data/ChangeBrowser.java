@@ -13,9 +13,7 @@ public class ChangeBrowser {
                 switch (browserName) {
 
                         case "yandex":
-                                System.setProperty("webdriver.chrome.driver", "/Users/olegbarbashin/DIPLOM/Diplom_3/src/main/resources/chromedriver_108");
-                                // System.setProperty("webdriver.chrome.driver", "/Users/olegbarbashin/DIPLOM/Diplom_3/src/main/resources/chromedriver");
-                                // для версии Яндекс-Браузер версии v.21.5.0.751 (Mac OS X Puma) chromedriver - версия 90.0.4430.24
+                                System.setProperty("webdriver.chrome.driver", "/Users/olegbarbashin/IdeaProjects/Test-tipay-regform-tilda/src/main/resources/chromedriver_110");
                                 ChromeOptions options = new ChromeOptions();
                                 options.setBinary("/Applications/Yandex.app/Contents/MacOS/Yandex");
                                 return new ChromeDriver(options);

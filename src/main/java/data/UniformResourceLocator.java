@@ -3,7 +3,7 @@ package data;
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class UniformResourceLocator {
-    public static final String BASE_URL = "https://tipay.ru/";
+    public static final String BASE_URL = "https://gaimp.ru/";
 
 
 
